@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
  
   devise_for :admin_users, ActiveAdmin::Devise.config
-  
+
   ActiveAdmin.routes(self) 
   class ActiveAdmin::Devise::SessionsController 
    before_action :auth_user
  def auth_user
-  return if current_user.admin == true
+  return if current_user.try(:admin?) == true
 
     redirect_to home_About_path
 
