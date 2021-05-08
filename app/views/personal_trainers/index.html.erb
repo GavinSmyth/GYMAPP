@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="title">Personal Trainers</h1>
+
+<div class = "page-conatiner">
+<table class = "table table-striped table-hover table-bordered">
+  <thead class="table-dark">    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Number</th>
+      <th>Description</th>
+      <th>Noofclient</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @personal_trainers.each do |personal_trainer| %>
+      <tr>
+        <td><%= personal_trainer.name %></td>
+        <td><%= personal_trainer.email %></td>
+        <td><%= personal_trainer.number %></td>
+        <td><%= personal_trainer.description %></td>
+        <td><%= personal_trainer.noOfClient %></td>
+        <td><%= link_to 'Show', personal_trainer %></td>
+        <% if signed_in? %>
+          <% if current_user.admin == true %>
+        <td><%= link_to 'Edit', edit_personal_trainer_path(personal_trainer) %></td>
+        <td><%= button_to  'Destroy', personal_trainer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Personal Trainer', new_personal_trainer_path, class:"btn btn-dark" %>
+</div>

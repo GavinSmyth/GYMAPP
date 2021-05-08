@@ -1,0 +1,53 @@
+<%= stylesheet_link_tag 'index', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-1">
+      
+    </div>
+    <div class="col-md-10", id="middle">
+		<h1 class="jumbotron-heading">Welcome to the GYM</h1>
+		<h4 class="second">To get started, Keep track of goals or to find out some more information click the links below</h4>
+	</br>
+		<div class="container1">
+  			<div class="row">
+    			<div class="col-md-4">  
+    				<div class="card" style="width: 18rem;">
+					  <%= image_tag("logos/gym_image.jpg", :alt => "rss feed", :class=> "img-circular") %>
+					  <div class="card-body">
+					    <h5 class="card-title">Personal Trainers</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <a href="personal_trainers#index" class="btn btn-primary">Proceed</a>
+					  </div>
+					</div>
+    			</div>
+    			<div class="col-md-4", id="middle">
+					<div class="card" style="width: 18rem;">
+					  <%= image_tag("logos/gym_image.jpg", :alt => "rss feed", :class=> "img-circular") %>
+					  <div class="card-body">
+					    <h5 class="card-title">Clases</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <a href="gym_classes#index" class="btn btn-primary">Proceed</a>
+					  </div>
+					</div>
+
+				</div>
+    			<div class="col-md-4">
+    				<div class="card" style="width: 18rem;">
+					  <%= image_tag("logos/gym_image.jpg", :alt => "rss feed", :class=> "img-circular") %>
+					  <div class="card-body">
+					    <h5 class="card-title">About</h5>
+					    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					    <a href="home/About" class="btn btn-primary">Proceed</a>
+					  </div>
+					</div>
+    			</div>
+  			</div>
+		</div>
+	</div>
+    <div class="col-md-1">
+    </div>
+  </div>
+</div>
+
+
+

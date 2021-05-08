@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<%= stylesheet_link_tag 'show', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4", style="text-align: center;">
+      
+      New Gym Class
+    </h1>
+        <%= form_with(model: gym_class) do |form| %>
+  <% if gym_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gym_class.errors.count, "error") %> prohibited this gym_class from being saved:</h2>
+
+      <ul>
+        <% gym_class.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :PT_id %>
+    <%= form.number_field :PT_id %>
+  </div>
+
+  <div>
+    <%= form.label :PT_name %>
+    <%= form.text_field :PT_name%>
+  </div>
+
+  <div>
+    <%= form.label :Class_type %>
+    <%= form.text_field :Class_type %>
+  </div>
+
+  <div>
+    <%= form.label :Date %>
+    <%= form.date_select :Date %>
+  </div>
+
+  <div>
+    <%= form.label :Time %>
+    <%= form.time_select :Time %>
+  </div>
+
+  <div class="actions", style="text-align:center;">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+   
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

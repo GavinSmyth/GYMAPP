@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">
+      <%= @personal_trainer.name %>
+      
+    </h1>
+
+<p>
+  <strong>Email:</strong>
+  <%= @personal_trainer.email %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @personal_trainer.number %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @personal_trainer.description %>
+</p>
+
+<p>
+  <strong>Noofclient:</strong>
+  <%= @personal_trainer.noOfClient %>
+</p>
+ </div>
+</div>
+
+<%= link_to 'Edit', edit_personal_trainer_path(@personal_trainer), class:"btn btn-dark" %> |
+<%= link_to 'Back', personal_trainers_path, class:"btn btn-dark" %>

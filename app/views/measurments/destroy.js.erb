@@ -1,0 +1,4 @@
+// place this code in your packs or the assets pipeline
+$(document).on('ajax:success', '.delete', function(){
+  $(this).closest('tr').fadeOut();
+});

@@ -1,0 +1,53 @@
+// Place all the styles related to the Gym_Classes controller here.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.nav {
+    text-align: center;
+    margin: 20px 0 0 ;
+    padding: 10px 0;
+    }
+.title {
+    text-align: center;
+     margin: 20px 0 0 ;
+    padding: 10px 0;
+    }
+.table {
+    width:100%;
+
+}
+.table th{
+    text-align: left;
+}
+.page-conatiner{
+    max-width: 900px;
+    margin: auto;
+}
+#landingPage{
+    height: 300px;
+    background-color:#e9ecef ;
+    text-align: center;
+    margin: auto;
+    
+   
+}
+#first{
+    font-weight: 300;
+    line-height: 1.2;
+    width: inherit;
+    height: 50px;
+    
+    
+}
+
+.row{
+
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+.field{
+    text-size: 10px;
+   
+}
+

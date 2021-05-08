@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Week:</strong>
+  <%= @measurment.week %>
+</p>
+
+<p>
+  <strong>Weightkg:</strong>
+  <%= @measurment.weightKG %>
+</p>
+
+<p>
+  <strong>Weightstone:</strong>
+  <%= @measurment.weightStone %>
+</p>
+
+<p>
+  <strong>Weightpounds:</strong>
+  <%= @measurment.weightPounds %>
+</p>
+
+<p>
+  <strong>Bodyfat:</strong>
+  <%= @measurment.bodyFat %>
+</p>
+
+<%= link_to 'Edit', edit_measurment_path(@measurment) %> |
+<%= link_to 'Back', measurments_path %>

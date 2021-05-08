@@ -1,0 +1,3 @@
+class PersonalTrainer < ApplicationRecord
+	
+end

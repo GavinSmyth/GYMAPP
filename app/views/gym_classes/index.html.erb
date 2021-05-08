@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="title">Gym Classes</h1>
+<div class = "page-conatiner">
+<table class = "table table-striped table-hover table-bordered">
+  <thead class="table-dark">
+    <tr> 
+      <th>PT ID</th>
+      <th>PT name</th>
+      <th>Class</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gym_classes.each do |gym_class| %>
+      <tr>
+        <td><%= gym_class.PT_id %></td>
+        <td><%= gym_class.PT_name %></td>
+        <td><%= gym_class.Class_type %></td>
+        <td><%= gym_class.Date %></td>
+        <td><%= gym_class.Time %></td>
+        <td><%= link_to 'Show', gym_class %></td>
+        <% if signed_in? %>
+          <% if current_user.admin == true %>
+        <td><%= link_to 'Edit', edit_gym_class_path(gym_class) %></td>
+        <td><%= button_to  'Destroy', gym_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Gym Class', new_gym_class_path, class:"btn btn-dark" %>
+</div>

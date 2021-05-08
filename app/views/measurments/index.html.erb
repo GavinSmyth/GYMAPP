@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+<%= stylesheet_link_tag 'measurments', media: 'all', 'data-turbolinks-track': 'reload' %>
+<h1 class="title">Tracking Progress</h1>
+<div class = "container1">
+ <div class = "row">
+  <div class="col-md-6">
+    <h2 class="title">Tracking</h2>
+    <p>Tracking your food and calorie intake can be important.
+      <br>
+      Research shows that people who log calories lose more weight and are likelier to keep the weight off in the long run 
+      <br>
+      These days, counting calories is very easy. There are many useful websites and apps that help you log your meals and track your intake.
+      <br>
+      Tracking calories is accessible online, and signing up takes less than a minute on most apps.
+      <br>
+      Last but not least, most of them are free.</p>
+      <h2 class="title">Tips</h2>
+      <ul>
+        <li>Exercise Daily</li>
+        <li>Eat the Right Foods and Portion Each Meal</li>
+        <li>Keep Track of Calories and Food Intake Per Day</li>
+        <li>Be Sure to Get Sleep</li>
+        <li>Stay Motivated</li>
+
+       </ul> 
+
+  </div>
+    <div class="col-md-6">
+    <h2 class="title">Measurements</h2>
+  <table class = "table table-striped table-hover table-bordered" >
+  <thead class="table-dark">
+    <tr>
+      <th>Week</th>
+      <th>Weightkg</th>
+      <th>Weightstone</th>
+      <th>Weightpounds</th>
+      <th>Bodyfat</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @measurments.each do |measurment| %>
+    
+      <tr>
+        <td><%= measurment.week %></td>
+        <td><%= measurment.weightKG %></td>
+        <td><%= measurment.weightStone %></td>
+        <td><%= measurment.weightPounds %></td>
+        <td><%= measurment.bodyFat %></td>
+        <td><%= link_to 'Show', measurment %></td>
+        <td><%= link_to 'Edit', edit_measurment_path(measurment) %></td>
+        <td><%= button_to 'Destroy', measurment, method: :delete, data: { confirm: 'Are you sure?' }%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+    <%= link_to 'New Measurment', new_measurment_path, class:"btn btn-dark"  %>
+    </div>
+</div>
+</div>

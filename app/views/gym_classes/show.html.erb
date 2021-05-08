@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<%= stylesheet_link_tag 'show', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">
+      <%= @gym_class.PT_name %>
+      
+    </h1>
+    <p>
+  <strong>Class type:</strong>
+  <%= @gym_class.Class_type %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @gym_class.Date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @gym_class.Time %>
+</p>
+    <%= link_to 'Edit', edit_gym_class_path(@gym_class), class:"btn btn-dark"  %> |
+    <%= link_to 'Back', gym_classes_path, class:"btn btn-dark"  %>
+  </div>
+</div>
+
+
+
+

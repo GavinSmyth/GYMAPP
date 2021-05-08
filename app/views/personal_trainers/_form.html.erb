@@ -1,0 +1,51 @@
+
+<%= stylesheet_link_tag 'show', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4", style="text-align: center;">
+      
+       Personal Trainer
+    </h1>
+<%= form_with(model: personal_trainer) do |form| %>
+  <% if personal_trainer.errors.any? %>
+  
+
+      <ul>
+        <% personal_trainer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number %>
+    <%= form.text_field :number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :noOfClient %>
+    <%= form.number_field :noOfClient %>
+  </div>
+
+  <div class="actions", style="text-align:center;">
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>
+</div>

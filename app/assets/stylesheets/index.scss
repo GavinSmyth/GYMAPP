@@ -1,0 +1,39 @@
+.jumbotron-heading{
+	font-weight: 300;
+	font-family: Garamond, serif;
+	text-align: center;
+	margin-top: 40px;
+}
+.second{
+	text-align: center;
+	font-family: Garamond, serif;
+	margin-top: 20px;
+	color: black;
+}
+
+.card-body{
+	text-align: center;
+}
+.container{
+	background-color: #d3d3d3;
+}
+.container1{
+	text-align: centre;
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+.btn{
+	
+	background-color: #212529;
+}
+html, body {
+   min-height: 765px; // <= width of the .container
+ }
+ .card{
+ 	border-radius: 25px;
+ }
+ 
+.img-circular{
+	border-radius: 25px;
+	
+}
