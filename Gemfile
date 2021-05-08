@@ -7,6 +7,7 @@ gem 'pundit', '~> 1.1'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'activeadmin'
 gem 'devise_zxcvbn'
+gem 'popper_js', '~> 2.9.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
 # Use sqlite3 as the database for Active Record
@@ -48,6 +49,7 @@ end
 
 group :production do
   gem 'pg', '~> 1.2', '>= 1.2.3'
+
 end
 
 

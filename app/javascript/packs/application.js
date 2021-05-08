@@ -4,6 +4,7 @@
 // that code so it'll be compiled.
 
 //= require jquery
+//= require popper
 //= require rails-ujs
 
 import Rails from "@rails/ujs"
