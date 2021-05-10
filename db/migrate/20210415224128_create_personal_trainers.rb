@@ -1,6 +1,7 @@
 class CreatePersonalTrainers < ActiveRecord::Migration[6.1]
   def change
     create_table :personal_trainers do |t|
+      t.integer :pt_id
       t.string :name
       t.string :email
       t.string :number

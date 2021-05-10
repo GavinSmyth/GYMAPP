@@ -60,8 +60,9 @@ class MeasurmentsController < ApplicationController
     end
   end
   def correct_use
-    @measurment = current_user.measurments.find_by(id: params[:id])
-    redirect_to measurments_path, notice: "not Authorised" if @measurment.nil?
+    @measurment = current_user.measurments.find_by_id(:id)
+    
+    redirect_to measurments_path, notice: "Not Authorised" if @measurment.nil?
   end
 
   private
